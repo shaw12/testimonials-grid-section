@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+body{
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: hsl(210, 46%, 95%);
+    padding: 0px 90px;
+}
+main{
+    display: flex;
+    max-width: 100%;
+}
+.main-1{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    grid-template-rows: minmax(100px, auto);
+    margin: 20px;
+    grid-auto-flow: dense;
+    grid-gap: 25px;
+    max-width: 90%;
+}
+.main-2{
+    margin: 20px 30px 0 0;
+}
+.card{
+    padding: 35px 40px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s;
+    background: hsl(217, 19%, 35%);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.card__head{
+    display: flex;
+    align-items: center;
+    color: hsl(0, 0%, 81%);
+    margin-bottom: 10px;
+}
+.card__head img{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid #fff;
+}
+.name{
+    font-weight: 600;
+    font-size: 15px;
+}
+.card__auth p{
+    opacity: 0.5;
+}
+.card__heading{
+    color: #fff;
+    margin-bottom: 10px;
+}
+.card__detail{
+    color: hsl(0, 0%, 81%);
+    opacity: 0.7;
+    line-height: 1.5;
+}
+.main-1 .card:nth-child(1){
+    grid-column: span 2;
+    grid-row: span 1;
+    background-color: hsl(263, 55%, 52%);
+    background-image: url('./images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-position: 80% 0%;
+}
+.card:nth-child(3){
+    padding-right: 50px;
+}
+.card:nth-child(4){
+    grid-column: span 2;
+    grid-row: span 1;
+}
+.card-5{
+    margin-right: 40px;
+}
+h2{
+    font-size: 22px;
+}
+@media (max-width: 992px){
+    body{
+        padding: 0 20px;
+    }
+    main{
+        flex-direction: column;
+    }
+    .main-2{
+        margin-right: 0px !important;
+        padding: 0 20px;
+    }
+}
+@media (max-width: 768px){
+    .main-1{
+
+        grid-template-columns: repeat(auto-fill, minmax(50%,1fr));
+        grid-template-rows: minmax(auto, auto);
+
+    }
+    .main-1 .card{
+        grid-column: unset !important;
+        grid-row: unset !important;
+    }
+}
