@@ -29,7 +29,10 @@ main{
     max-width: 90%;
 }
 .main-2{
-    margin: 20px 30px 0 0;
+    margin: 20px 10px 25px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    grid-template-rows: minmax(100px, auto); 
 }
 .card{
     padding: 35px 40px;
@@ -79,13 +82,25 @@ main{
 }
 .card:nth-child(3){
     padding-right: 50px;
+    background-color: hsl(0, 0%, 100%);
 }
 .card:nth-child(4){
     grid-column: span 2;
     grid-row: span 1;
+    background-color: hsl(219, 29%, 14%);
 }
 .card-5{
     margin-right: 40px;
+    background-color: hsl(0, 0%, 100%);
+    
+}
+.card-5 .card__heading,
+.card-5 .card__head,
+.card-5 .card__detail,
+.card:nth-child(3) .card__heading,
+.card:nth-child(3) .card__head,
+.card:nth-child(3) .card__detail{
+    color: #222;
 }
 h2{
     font-size: 22px;
@@ -99,15 +114,15 @@ h2{
     }
     .main-2{
         margin-right: 0px !important;
-        padding: 0 20px;
+        padding: 0 20px; 
+        grid-template-columns: repeat(auto-fill, minmax(100%,1fr));
+        grid-template-rows: minmax(auto, auto);
     }
 }
 @media (max-width: 768px){
     .main-1{
-
         grid-template-columns: repeat(auto-fill, minmax(50%,1fr));
         grid-template-rows: minmax(auto, auto);
-
     }
     .main-1 .card{
         grid-column: unset !important;
